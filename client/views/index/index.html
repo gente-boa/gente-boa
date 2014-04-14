@@ -1,0 +1,143 @@
+<template name="index">
+  <header class="header">
+    <a name="top"></a>
+    <div class="welcome">
+      <div class="row caption">
+        <div class="col-sm-12 text-center">
+          <img src="/gente-boa.png" alt="">
+          <h1 class="text-center">Ser <strong>Gente Boa</strong> recompensa!</h1>
+          <p class="loginFace login-button">Comece agora</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <a name="how"></a>
+  <section class="how section-green">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <!-- <h2>How it works</h2> -->
+          <h2 class="text-center">Descubra como ser<br>Gente Boa!</h2>
+          <img class="img-responsive" src="/images/comoFunciona.png">
+        </div>
+      </div>
+    </div>
+  </section>
+  <a name="events"></a>
+  <section class="events text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- <h2>For events</h2> -->
+          <h2> Eventos passados</h2>
+          <!-- each pelos eventos -->
+          {{#each eventsLanding}}
+          <div class="col-sm-4">
+
+            <i class="features features-instant"></i>
+            <div class="row">
+            	<div class="col-sm-6 col-sm-offset-3">
+            		<img src="images/{{linkong}}" alt="" class="img-responsive " style="float:center;">
+            	</div>
+            </div>
+            <h4>{{title}}</h4>
+            <p>{{sub description}}</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--a name="team"></a>
+  <section class="team section-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h3>Nossa equipe</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-xs-offset-1 col-xs-10">
+          <h4>Leadership</h4>
+        </div>
+        <div class="col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+          <div class="profile">
+            <div class="row">
+              <div class="col-sm-4">
+                <img class="img-profile img-responsive" src="">
+                <ul class="list-inline text-center">
+                  <li><a target="_blank" href="https://twitter.com/selcukatli"><i class="icon-twitter"><span>Twitter</span></i></a></li>
+                  <li><a target="_blank" href="http://www.linkedin.com/in/selcukatli"><i class="icon-linkedin"><span>Linked In</span></i></a></li>
+                </ul>
+              </div>
+              <div class="col-sm-8">
+                <h5>Selcuk Atli</h5>
+                <h6>Co-Founder and CEO</h6>
+                <p>Selcuk is a Fulbright scholar, endeavor entrepreneur and singer song writer. He previously founded Socialwire, an award winning Facebook partner that helps top online retailers automate their product ads.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-xs-10 col-xs-offset-1">
+          <div class="profile">
+            <div class="row">
+              <div class="col-sm-4">
+                <img class="img-profile img-responsive" src="">
+                <ul class="list-inline text-center">
+                  <li><a target="_blank" href="https://twitter.com/changcommaalex"><i class="icon-twitter"><span>Twitter</span></i></a></li>
+                  <li><a target="_blank" href="http://www.linkedin.com/in/changcommaalex"><i class="icon-linkedin"><span>Linked In</span></i></a></li>
+                </ul>
+              </div>
+              <div class="col-sm-8">
+                <h5>Alex Chang</h5>
+                <h6>Co-Founder and CTO</h6>
+                <p>Alex served as Co-Founder and Chief Product Officer of Social Amp which helped retailers like Levi’s and 1-800 Flowers personalize their shopping experiences with Facebook. Social Amp was acquired early 2012.
+              </p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-xs-offset-1 col-xs-10">
+          <h4>Our Investors</h4>
+          <div class="row investors">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+              <a href="http://svangel.com/" target="_blank"><i class="investor investor-svangel"><span>SVAngel</span></i></a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+              <a href="http://ycombinator.com/" target="_blank"><i class="investor investor-yc"><span>YCombinator</span></i></a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+              <a href="http://500.co/" target="_blank"><i class="investor investor-500"><span>500 Startups</span></i></a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+              <a href="https://angel.co/boostable" target="_blank"><i class="investor investor-more"><span>See More</span></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact section-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h3>Need more information?</h3>
+          <h4>Contact us with any questions. We will get back to<br> you as soon as possible</h4>
+          <a href="mailto:sales@boostable.com" class="btn btn-default">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section-->
+  <section class="footer">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h3>Precisa de mais informações?</h3>
+          <h4>Entre em contato conosco <br> responderemos o mais rápido possível</h4>
+          <a href="mailto:" class="btn btn-default">Contato</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
