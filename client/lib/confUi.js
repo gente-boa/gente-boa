@@ -1,9 +1,21 @@
-if (ServiceConfiguration.configurations.find({service: 'facebook'}).count()===0) {
-  ServiceConfiguration.configurations.insert({
-    service: "facebook",
-    appId: "457036687763741",
-    secret: "2d225d1e472e9908c556cbf6bd8725e1"
-  });
+if (_.isEmpty(Meteor.absoluteUrl().match(('http://genteboa.meteor.com/')))) {
+  console.log('In localhost facebook');
+
+  if (ServiceConfiguration.configurations.find({service: 'facebook'}).count()===0) {
+    ServiceConfiguration.configurations.insert({
+      service: "facebook",
+      appId: "630773633655957",
+      secret: "46d053f27c8425694a42d8b3dd0c1ffd"
+    });
+  }
+} else {
+  if (ServiceConfiguration.configurations.find({service: 'facebook'}).count()===0) {
+    ServiceConfiguration.configurations.insert({
+      service: "facebook",
+      appId: "457036687763741",
+      secret: "2d225d1e472e9908c556cbf6bd8725e1"
+    });
+  }
 }
 
 Meteor.subscribe('events');
