@@ -1,21 +1,10 @@
-if (_.isEmpty(Meteor.absoluteUrl().match(('http://genteboa.meteor.com/')))) {
-  console.log('In localhost facebook');
-  //Send via webfaction
-  process.env.MAIL_URL='smtp://cleaniosupport:rickgoz2013@smtp.webfaction.com:465/';
-} else {
-  //Config
-  if (ServiceConfiguration.configurations.find({service: 'facebook'}).count()===0) {
-    ServiceConfiguration.configurations.insert({
-      service: "facebook",
-      appId: "457036687763741",
-      secret: "2d225d1e472e9908c556cbf6bd8725e1"
-    });
-  }
+if (ServiceConfiguration.configurations.find({service: 'facebook'}).count()===0) {
+  ServiceConfiguration.configurations.insert({
+    service: "facebook",
+    appId: "457036687763741",
+    secret: "2d225d1e472e9908c556cbf6bd8725e1"
+  });
 }
-
-
-
-
 
 Meteor.subscribe('events');
 Meteor.subscribe('users');
