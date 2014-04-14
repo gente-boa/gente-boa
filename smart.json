@@ -1,0 +1,13 @@
+{
+  "packages": {
+    "iron-router": {},
+    "handlebars-server": {},
+    "collection-hooks": {},
+    "sitemaps": {},
+    "bootstrap-3": {},
+    "fast-render": {},
+    "roles": {},
+    "moment-with-langs": {},
+    "humane": {}
+  }
+}

@@ -1,0 +1,27 @@
+iron-router
+blaze-layout
+handlebars-server
+collection-hooks
+sitemaps
+robots-txt
+bootstrap-3
+fast-render
+ms-seo
+roles
+moment-with-langs
+<<<<<<< HEAD
+/fast-render
+=======
+/iron-router
+/handlebars-server
+/collection-hooks
+/sitemaps
+/bootstrap-3
+/fast-render
+/ms-seo
+/roles
+/moment-with-langs
+/blaze-layout
+/robots-txt
+>>>>>>> eac73b1905dbe57dea6f021a6b5387cb025c05f0
+/humane

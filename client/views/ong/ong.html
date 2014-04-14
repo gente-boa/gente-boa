@@ -1,0 +1,57 @@
+<template name="ong">
+  <section class="profile">
+  	<div class="col-sm-2 profile-menu">
+  		<div class="row">
+  			<div class="col-sm-12 profile-picture">
+  				<img src="/images/greenpeace.jpg" alt="{{nome}}" class="img-circle img-responsive">
+  			</div>
+  			<div class="col-sm-12 text-center profile-description">
+  				<h1>Greenpeace</h1>
+		  		<button class="btn btn-primary btn-slim">Seguir</button>
+  			</div>
+  			<div class="col-sm-12 text-left">
+  				<hr>
+        		<h3><small>Eventos:</small> 0</h3>
+        		<h3><small>Colaboradores:</small> 0</h3>
+  			</div>
+  		</div>
+	</div>
+	<div class="col-sm-10 col-sm-offset-2 timeline">
+		<div class="container">
+			<div class="row list-group list-unstyled events-list">
+			{{#each listEvents}}
+				<div class="col-sm-12 list-group-item timeline-event">
+					<h4 class="list-group-item-heading">
+						<div class="row">
+		  					<span class="col-sm-1 foto">
+		  						<img src="images/{{linkong}}" alt="{{nome}}" class="img-circle img-responsive">
+		  					</span>
+		  					<span class="col-sm-11 text-left nome">
+		  						Greenpeace
+		  						<br>
+		  						<small>
+		  							Adicionou {{type}} {{data}}
+		  						</small>
+		  					</span>
+		  				</div>
+					</h4>
+					<div class="list-group-item-text">
+						<div class="row text-center">
+							<div class="col-sm-11 col-sm-offset-1">
+								<h3>{{title}}</h3>
+							</div>
+							<div class="col-sm-10 col-sm-offset-1  text-left">
+								{{description}}
+							</div>
+							<button class="btn btn-primary">Ser Gente Boa!</button>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+			
+		</div>
+	</div>
+  </section>
+</template>
+
