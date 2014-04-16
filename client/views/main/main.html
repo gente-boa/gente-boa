@@ -19,44 +19,22 @@
     {{/each}}
 	<div class="col-sm-10 col-sm-offset-2 timeline margin-nav">
     {{#if isOng}}
-      <ul class="cbp_tmtimeline">
-        <li>
-           <div class="cbp_tmlabel">
-              <h3>{{ong}} <small>{{fromNow createDate}}</small>
-              <br>
-              </h3>
-              <h2>
-                {{title}}
-              </h2>
-              <p>
-                Local: {{local}}
-              </p>
-              <p>
-                Data de criação: {{parsedDate createDate}}
-              </p>
-              <p>
-              {{>vaiGente}}
-              </p>
+      <div class="event_form">
+        <h2>Criar um novo evento</h2>
+        <div class="row">
+          <div class="col-sm-6">
+            <label for="name">Nome</label>
+            <input name="name" class="form-control" placeholder="Nome do evento">
+            <label for="date">Data e Hora</label>
+            <input name="date" class="form-control" type="datetime-local">
           </div>
-        </li>
-      </ul>
-    {{else}}
-      <div class="cbp_tmlabel">
-        <h3>{{ong}} <small>{{fromNow createDate}}</small>
-          <br>
-        </h3>
-        <h2>
-          {{title}}
-        </h2>
-        <p>
-          Local: {{local}}
-        </p>
-        <p>
-          Data de criação: {{parsedDate createDate}}
-        </p>
-        <p>
-          {{>vaiGente}}
-        </p>
+          <div class="col-sm-6">
+            <label for="description">Descrição</label>
+            <textarea name="description" class="form-control"></textarea>
+            <label for="location">Localização</label>
+            <h3>Vai ter um mapa aqui ok!?</h3>
+          </div>
+        </div>
       </div>
     {{/if}}
     <ul class="cbp_tmtimeline">

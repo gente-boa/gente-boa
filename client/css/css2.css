@@ -1099,3 +1099,17 @@ a.thumbnail{
 section .container{
   padding-top:100px;
 }
+
+.event_form{
+  margin: 0 0 15px 0;
+  background: #1E7A5C !important;
+  color: #fff;
+  padding: 2em;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.4;
+  position: relative;
+  border-radius: 5px;
+}
+
+#map-canvas { height: 100% }
