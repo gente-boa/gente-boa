@@ -21,8 +21,6 @@ if (_.isEmpty(Meteor.absoluteUrl().match(('http://genteboa.meteor.com/')))) {
 Meteor.subscribe('events');
 Meteor.subscribe('users');
 
-//Divide x / y
-
 UI.registerHelper('picFacebook', function(facebookId) {
   var user = Meteor.user();
   if (user&& user.profile && user.profile.id) {
@@ -32,7 +30,14 @@ UI.registerHelper('picFacebook', function(facebookId) {
   }
 });
 
-
+UI.registerHelper('isOng', function(){
+  var user = Meteor.user();
+  if(user && user.role){
+    return user.role === 'ong';
+  }else{
+    return false;
+  }
+});
 
 
 UI.registerHelper('clean', function(val) {

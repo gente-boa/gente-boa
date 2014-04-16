@@ -50,8 +50,7 @@ h1, h2, h3{
   margin-bottom: 0px;
   width:100%;
   text-transform: uppercase;
-  /*position:absolute; ALGUMA OBJECAO POR TIRAR O ABSOLUTE?*/
-  box-shadow:0px 3px 5px rgba(0,0,0, 0.5);
+  position:absolute;
 }
 
 .navbar .login-buttons-dropdown-align-{
@@ -1093,3 +1092,10 @@ a.thumbnail{
 	color:black;
 }
 
+.navbar .login-buttons-dropdown-align-:hover{
+  background-color: #ff6633;
+}
+
+section .container{
+  padding-top:100px;
+}

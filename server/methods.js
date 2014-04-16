@@ -4,7 +4,6 @@ Meteor.startup(function () {
 
   Meteor.methods({
     sendEmail: function(email) {
-      console.log(email);
       Email.send({
         to: email,
         from: 'gentes@sejagenteboa.com.br',

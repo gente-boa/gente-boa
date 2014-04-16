@@ -18,8 +18,49 @@
 	   </div>
     {{/each}}
 	<div class="col-sm-10 col-sm-offset-2 timeline margin-nav">
+    {{#if isOng}}
+      <ul class="cbp_tmtimeline">
+        <li>
+           <div class="cbp_tmlabel">
+              <h3>{{ong}} <small>{{fromNow createDate}}</small>
+              <br>
+              </h3>
+              <h2>
+                {{title}}
+              </h2>
+              <p>
+                Local: {{local}}
+              </p>
+              <p>
+                Data de criação: {{parsedDate createDate}}
+              </p>
+              <p>
+              {{>vaiGente}}
+              </p>
+          </div>
+        </li>
+      </ul>
+    {{else}}
+      <div class="cbp_tmlabel">
+        <h3>{{ong}} <small>{{fromNow createDate}}</small>
+          <br>
+        </h3>
+        <h2>
+          {{title}}
+        </h2>
+        <p>
+          Local: {{local}}
+        </p>
+        <p>
+          Data de criação: {{parsedDate createDate}}
+        </p>
+        <p>
+          {{>vaiGente}}
+        </p>
+      </div>
+    {{/if}}
+    <ul class="cbp_tmtimeline">
     {{#each events}}
-		<ul class="cbp_tmtimeline">
 	    <li>
 	        <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>{{time}}</span> <span>{{date}}</span></time>
 	        <div class="cbp_tmicon">	<img src="images/{{linkong}}" alt="" class="img-responsive img-circle"></div>
@@ -41,8 +82,8 @@
 	            </p>
 	        </div>
 	    </li>
-    </ul>
     {{/each}}
+    </ul>
 	</div>
   </section>
 </template>

@@ -18,10 +18,9 @@ Accounts.onCreateUser(function(options, user) {
         profile = result.data;
 
         user.profile = profile;
-      } else {
-        user.profile = options.profile ? options.profile : {};
-      }
-
+    } else {
+      user.profile = options.profile ? options.profile : {};
+    }
     return user;
   });
 

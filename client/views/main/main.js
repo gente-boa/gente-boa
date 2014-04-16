@@ -20,8 +20,6 @@ Template['vaiGente'].events({
     Session.set('numberCredits', 1);
   },
   'click .cbp_tmtimeline': function (event, template) {
-    console.log(this);
-    console.log(event);
     Session.set('numberCredits', 1);
   },
 
