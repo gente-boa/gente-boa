@@ -1080,8 +1080,8 @@ a.thumbnail{
 
 
 .section-green{
-	height:100%;
-	background-color:#3EFABC;
+	height: 100%;
+	background-color: #89FBD5;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span:first-child{
@@ -1090,6 +1090,10 @@ a.thumbnail{
 
 .goCadastro{
 	color:black;
+}
+
+.goAcesso{
+  color:black;
 }
 
 .navbar .login-buttons-dropdown-align-:hover{
@@ -1113,3 +1117,7 @@ section .container{
 }
 
 #map-canvas { height: 100% }
+
+.navbar{
+  padding-top: 0px;
+}

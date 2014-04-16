@@ -32,11 +32,15 @@ UI.registerHelper('picFacebook', function(facebookId) {
 
 UI.registerHelper('isOng', function(){
   var user = Meteor.user();
-  if(user && user.role){
-    return user.role === 'ong';
-  }else{
-    return false;
+  if(user && user.roles){
+    console.log(user.roles);
+    for(var key in user.roles){
+      if(user.roles[key] === 'ong'){
+        return true;
+      }
+    }
   }
+  return false;
 });
 
 
