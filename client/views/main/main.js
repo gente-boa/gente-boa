@@ -25,5 +25,38 @@ Template['vaiGente'].events({
 
 });
 
+Template.addEvent.events({
+
+  'click #submitEvent': function(event, template) {
+    var
+      title       = $('#title').val(),
+      description = $('#description').val(),
+      date    = $('#date').val(),
+      time    = $('#time').val()
+    ;
+
+    if (_.isEmpty(title)&&
+        _.isEmpty(description)&&
+        _.isEmpty(date)&&
+        _.isEmpty(time)) {
+    humane.log('Complete todo os campos...');
+    } else {
+      Events.insert({
+        createDate: moment(),
+        date: date,
+        time: time,
+        title: title,
+        local: 'XXXX',
+        description: description,
+        // ong: Meteor.user().profile.name,
+        type: 'um evento',
+        linkong: 'leite.jpg',
+        subscribed: []
+      });
+      humane.log('Evento adicionado com sucesso!');
+    }
+  },
+});
+
 
 
