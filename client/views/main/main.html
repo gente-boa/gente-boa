@@ -1,5 +1,4 @@
 <template name="main">
-
   <section class="profile">
     {{#each user}}
   	<div class="col-sm-2 profile-menu">
@@ -11,60 +10,65 @@
   				<h1>{{profile.name}}</h1>
   			</div>
   			<div class="col-sm-12 text-center">
-  				<hr>
-          <h3><small>Créditos do bem:</small>{{number}}</h3>
+          {{#if isOng}}
+            <hr>
+            <button class="btn btn-primary btn-slim" data-toggle="modal" data-target="#ongFormModal">Editar perfil da ONG</button>
+          {{else}}
+            <h3><small>Créditos do bem:</small>{{number}}</h3>
+          {{/if}}
   			</div>
   		</div>
 	   </div>
     {{/each}}
-	<div class="col-sm-10 col-sm-offset-2 timeline margin-nav">
-    {{#if isOng}}
-      <div class="event_form">
-        <h2>Criar um novo evento</h2>
-        <div class="row">
-          <div class="col-sm-6">
-            <label for="name">Nome</label>
-            <input name="name" class="form-control" placeholder="Nome do evento">
-            <label for="date">Data e Hora</label>
-            <input name="date" class="form-control" type="datetime-local">
+  	<div class="col-sm-10 col-sm-offset-2 timeline margin-nav">
+      {{#if isOng}}
+        <div class="event_form">
+          <h2>Criar um novo evento</h2>
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="name">Nome</label>
+              <input name="name" class="form-control" placeholder="Nome do evento">
+              <label for="date">Data e Hora</label>
+              <input name="date" class="form-control" type="datetime-local">
+            </div>
+            <div class="col-sm-6">
+              <label for="description">Descrição</label>
+              <textarea name="description" class="form-control"></textarea>
+              <label for="location">Localização</label>
+              <h3>Vai ter um mapa aqui ok!?</h3>
+            </div>
+            <button class="btn btn-primary col-sm-2">Criar</button>
           </div>
-          <div class="col-sm-6">
-            <label for="description">Descrição</label>
-            <textarea name="description" class="form-control"></textarea>
-            <label for="location">Localização</label>
-            <h3>Vai ter um mapa aqui ok!?</h3>
-          </div>
-          <button class="btn btn-primary col-sm-2">Criar</button>
         </div>
-      </div>
-    {{/if}}
-    <ul class="cbp_tmtimeline">
-    {{#each events}}
-	    <li>
-	        <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>{{time}}</span> <span>{{date}}</span></time>
-	        <div class="cbp_tmicon">	<img src="images/{{linkong}}" alt="" class="img-responsive img-circle"></div>
-	        <div class="cbp_tmlabel">
-	            <h3>{{ong}} <small>{{fromNow createDate}}</small>
-	            <br>
-	            </h3>
-	            <h2>
-	            	{{title}}
-	            </h2>
-	            <p>
-	            	Local: {{local}}
-	            </p>
-	            <p>
-	            	Data de criação: {{parsedDate createDate}}
-	            </p>
-	            <p>
-              {{>vaiGente}}
-	            </p>
-	        </div>
-	    </li>
-    {{/each}}
-    </ul>
-	</div>
+      {{/if}}
+      <ul class="cbp_tmtimeline">
+      {{#each events}}
+  	    <li>
+  	        <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>{{time}}</span> <span>{{date}}</span></time>
+  	        <div class="cbp_tmicon">	<img src="images/{{linkong}}" alt="" class="img-responsive img-circle"></div>
+  	        <div class="cbp_tmlabel">
+  	            <h3>{{ong}} <small>{{fromNow createDate}}</small>
+  	            <br>
+  	            </h3>
+  	            <h2>
+  	            	{{title}}
+  	            </h2>
+  	            <p>
+  	            	Local: {{local}}
+  	            </p>
+  	            <p>
+  	            	Data de criação: {{parsedDate createDate}}
+  	            </p>
+  	            <p>
+                {{>vaiGente}}
+  	            </p>
+  	        </div>
+  	    </li>
+      {{/each}}
+      </ul>
+  	</div>
   </section>
+  {{> modalOngForm}}
 </template>
 
 <template name="insideMain">

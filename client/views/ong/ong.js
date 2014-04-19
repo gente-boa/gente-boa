@@ -1,8 +1,7 @@
 Template['ong'].helpers({
-listEvents: function () {
-	return Events.find();
-}
-
+	listEvents: function () {
+		return Events.find();
+	}
 });
 
 Template['ong'].events({

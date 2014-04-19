@@ -1,0 +1,33 @@
+<template name="modalOngForm">
+  <div class="modal fade" id="ongFormModal" tabindex="-1" role="dialog" aria-labelledby="ongFormModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">informações do Perfil</h4>
+        </div>
+        <div class="modal-body">
+          <div class="profile-form">
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="name">Nome</label>
+                <input name="name" class="form-control" placeholder="Nome da ONG">
+                <label for="location">Localização</label>
+                <h3>Um mapa permitindo adicionar multiplos marcadores</h3>
+              </div>
+              <div class="col-sm-6">
+                <label for="description">Descrição</label>
+                <textarea name="description" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Salvar Mudanças</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
