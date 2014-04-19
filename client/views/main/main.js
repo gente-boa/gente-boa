@@ -26,6 +26,15 @@ Template['vaiGente'].events({
 });
 
 Template.addEvent.events({
+  'click #createEvent': function(event, template) {
+    $('#addEvent').removeClass('hidden');
+    $('#createEvent').addClass('hidden');
+  },
+
+  'click #cancelEvent': function(event, template) {
+    $('#createEvent').removeClass('hidden');
+    $('#addEvent').addClass('hidden');
+  },
 
   'click #submitEvent': function(event, template) {
     var
@@ -42,18 +51,21 @@ Template.addEvent.events({
     humane.log('Complete todo os campos...');
     } else {
       Events.insert({
+        idUser: Meteor.userId(),
         createDate: moment(),
         date: date,
         time: time,
         title: title,
         local: 'XXXX',
         description: description,
-        // ong: Meteor.user().profile.name,
+        ong: Meteor.user().profile.name,
         type: 'um evento',
         linkong: 'leite.jpg',
         subscribed: []
       });
       humane.log('Evento adicionado com sucesso!');
+      $('#addEvent').addClass('hidden');
+      $('#createEvent').removeClass('hidden');
     }
   },
 });

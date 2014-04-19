@@ -1,12 +1,24 @@
 Events.allow({
-  insert : function () {
-    return true;
+  insert : function (userId, doc) {
+    if (Roles.userIsInRole(userId, 'admin')) {
+      return true;
+    } else {
+      return userId === doc.idUser;
+    }
   },
-  update : function () {
-    return true;
+  update : function (userId, doc) {
+    if (Roles.userIsInRole(userId, 'admin')) {
+      return true;
+    } else {
+      return userId === doc.idUser;
+    }
   },
-  remove : function () {
-    return true;
+  remove : function (userId, doc) {
+    if (Roles.userIsInRole(userId, 'admin')) {
+      return true;
+    } else {
+      return userId === doc.idUser;
+    }
   }
 });
 

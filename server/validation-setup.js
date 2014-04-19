@@ -1,5 +1,3 @@
-Events.remove({});
-
 if (Events.find().count() === 0) {
 Events.insert({
   createDate: moment('2014-03-16T09:30:00.000'),

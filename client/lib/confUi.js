@@ -1,3 +1,7 @@
+Meteor.subscribe('events');
+Meteor.subscribe('users');
+
+
 if (_.isEmpty(Meteor.absoluteUrl().match(('http://genteboa.meteor.com/')))) {
   console.log('In localhost facebook');
 
@@ -18,14 +22,13 @@ if (_.isEmpty(Meteor.absoluteUrl().match(('http://genteboa.meteor.com/')))) {
   }
 }
 
-Meteor.subscribe('events');
-Meteor.subscribe('users');
-
 UI.registerHelper('picFacebook', function(facebookId) {
   var user = Meteor.user();
   if (user&& user.profile && user.profile.id) {
     return 'http://graph.facebook.com/'+facebookId + '/picture/?width=200&height=200';
-  } else {
+  } else if (false){
+    return 'images/profile-photo.jpg';
+  } else{
     return 'images/profile-photo.jpg';
   }
 });

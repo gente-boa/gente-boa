@@ -88,7 +88,8 @@
 </template>
 
 <template name="addEvent">
-  <div class="event_form">
+  <button class="btn btn-primary col-sm-2" id="createEvent">Criar um novo Evento</button>
+  <div id="addEvent" class="event_form hidden">
     <h2>Criar um novo evento</h2>
     <div class="row">
       <div class="col-sm-6">
@@ -106,6 +107,7 @@
         <h3>Vai ter um mapa aqui ok!?</h3>
       </div>
       <button class="btn btn-primary col-sm-2" id="submitEvent">Criar</button>
+      <button class="btn btn-primary col-sm-2" id="cancelEvent">Cancelar</button>
     </div>
   </div>
 </template>
